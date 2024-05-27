@@ -2,12 +2,22 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="stylesheet" href="src/style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Personajes de Mortadelo y Filemón</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="app">
+			<h1>Personaje de Mortadelo y Filemón</h1>
+			<form id="filtra-personajes">
+				<div class="bloque-input">
+					<label for="input-personaje">Personaje </label>
+					<input type="text" name="input-personaje" id="input-personaje" placeholder="Bacterio, Mortadelo..." />
+				</div>
+				<button>Filtrar</button>
+			</form>
+			<section id="grid-personajes"></section>
+		</div>
 		<script type="module" src="/src/main.ts"></script>
 	</body>
 </html>
