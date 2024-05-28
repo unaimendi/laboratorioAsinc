@@ -1,13 +1,13 @@
-import { traePersonajes } from "./api";
 import { filtrarPersonaje, listarPersonajes } from "./filtrado";
 
-document.addEventListener("DOMContentLoaded", async () => {
-	const todosPersonajes = await traePersonajes();
+document.addEventListener("DOMContentLoaded", () => {
+	// Llamamos a la función listarPersonajes para que se muestren todos los personajes al cargar la página
+	listarPersonajes();
 
-	const formFiltrar = document.getElementById("filtra-personajes");
-	if (formFiltrar && formFiltrar instanceof HTMLFormElement) {
-		formFiltrar.addEventListener("submit", filtrarPersonaje);
+	// Obtenemos el botón de filtrar y le añadimos un evento de click
+	const filtrar = document.getElementById("filtrar");
+	if (filtrar && filtrar instanceof HTMLButtonElement) {
+		console.log("filtrar", filtrar);
+		filtrar.addEventListener("click", filtrarPersonaje);
 	}
-
-	listarPersonajes(todosPersonajes);
 });

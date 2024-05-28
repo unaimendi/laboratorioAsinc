@@ -9,13 +9,14 @@
 	<body>
 		<div id="app">
 			<h1>Personaje de Mortadelo y Filemón</h1>
-			<form id="filtra-personajes">
+			<!-- Para este caso no es necesario un form aunque se podría utilizar -->
+			<div id="filtra-personajes">
 				<div class="bloque-input">
 					<label for="input-personaje">Personaje </label>
 					<input type="text" name="input-personaje" id="input-personaje" placeholder="Bacterio, Mortadelo..." />
 				</div>
-				<button>Filtrar</button>
-			</form>
+				<button id="filtrar">Filtrar</button>
+			</div>
 			<section id="grid-personajes"></section>
 		</div>
 		<script type="module" src="/src/main.ts"></script>
